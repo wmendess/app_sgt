@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "SGT SMTT",
+    "slug": "sgt-smtt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1565C0"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.gov.saoluis.smtt.sgt",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necessário para fotografar ocorrências de trânsito.",
+        "NSPhotoLibraryUsageDescription": "Necessário para anexar fotos às ocorrências.",
+        "NSLocationWhenInUseUsageDescription": "Necessário para registrar a localização da ocorrência."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1565C0"
+      },
+      "package": "br.gov.saoluis.smtt.sgt",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "minSdkVersion": 26
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O aplicativo precisa de acesso às fotos para anexar imagens às ocorrências.",
+          "cameraPermission": "O aplicativo precisa de acesso à câmera para fotografar ocorrências."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "O aplicativo precisa de acesso à localização para registrar o local da ocorrência."
+        }
+      ]
+    ]
+  }
+}
